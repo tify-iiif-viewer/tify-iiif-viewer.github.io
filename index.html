@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMMOAADDDgAAAAAAAAAAAABERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/////////////////////////////////////////////////////////////////RERE/0RERP9ERET/RERE/////////////////////////////////////////////////////////////////0RERP9ERET/RERE/0RERP///////////////////////////0RERP9ERET///////////////////////////9ERET/RERE/0RERP9ERET///////////////////////////9ERET/RERE////////////////////////////RERE/0RERP9ERET/RERE////////////////////////////RERE/0RERP///////////////////////////0RERP9ERET/RERE/0RERP///////////////////////////0RERP9ERET///////////////////////////9ERET/RERE/0RERP9ERET///////////////////////////9ERET/RERE////////////////////////////RERE/0RERP9ERET/RERE////////////////////////////RERE/0RERP///////////////////////////0RERP9ERET/RERE/0RERP///////////0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET///////////9ERET/RERE/0RERP9ERET///////////9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE////////////RERE/0RERP9ERET/RERE/////////////////////////////////////////////////////////////////0RERP9ERET/RERE/0RERP////////////////////////////////////////////////////////////////9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/RERE/0RERP9ERET/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TIFY</title>
+		<style>
+			html {
+				font-family: sans-serif;
+			}
+		</style>
+		<script type="module" crossorigin src="/tify.js"></script>
+		<link rel="stylesheet" href="/tify.css">
+	</head>
+	<body style="margin: 0">
+		<main id="tify" style="height: 100vh"></main>
+		
+		<script>
+			window.addEventListener('load', () => {
+				const query = new URLSearchParams(window.location.search);
+
+				const options = {
+					container: '#tify',
+					language: query.get('language') || 'en',
+					manifestUrl: query.get('manifest'),
+					urlQueryKey: 'tify',
+					translationsDirUrl: '/translations',
+				};
+
+				window.tify = new Tify(options);
+
+				console.log('%cHi there! Glad you want to learn more about TIFY. Check out https://github.com/tify-iiif-viewer/tify or have at look at the current instance:', 'color: #09f');
+				console.dir(window.tify);
+			})
+		</script>
+	</body>
+</html>
